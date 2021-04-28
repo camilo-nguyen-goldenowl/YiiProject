@@ -61,7 +61,9 @@ class SiteController extends Controller
      * @return string
      */
     public function actionLogin() {
-        return Yii::$app->request->post();
+        return [
+            'token' =>  Yii::$app->getSecurity()->generateRandomString()
+        ];
 
     }
 }
