@@ -14,31 +14,9 @@ use yii\filters\VerbFilter;
 /**
  * PostsController implements the CRUD actions for Posts model.
  */
-class PostsController extends ActiveController
+class PostsController extends ApiController
 {
     public $modelClass = 'app\models\Posts';
-    /**
-     * {@inheritdoc}
-     */
-    public function actions(){
-        $actions = parent::actions();
-        unset($actions['create']);
-        unset($actions['update']);
-        unset($actions['delete']);
-        unset($actions['view']);
-        unset($actions['index']);
-        return $actions;
-    }
-
-    public function behaviors()
-    {
-        $behaviors = parent::behaviors();
-        $behaviors['authenticator'] = [
-            'class' => HttpBearerAuth::className(),
-        ];
-        return $behaviors;
-
-    }
 
     /**
      * Lists all Posts models.
