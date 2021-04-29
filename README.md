@@ -24,4 +24,4 @@ RootProject/config/db.php:
     'charset' => 'utf8',
 
 
-php yii migrate ```
+php yii migrate 
