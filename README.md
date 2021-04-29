@@ -13,4 +13,6 @@ composer install
 
 
 ### Migration Database
+Before Migrating database we need to config connection to Database Server in file
+``` RootProject/config/db.php ```
 ``` php yii migrate ```
